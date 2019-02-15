@@ -47,6 +47,7 @@ pipeline:
       - cat /drone/owncloud-smoketest/version.php
       - mkdir -p /drone/owncloud-smoketest/vendor-bin/behat
       - wget https://raw.githubusercontent.com/owncloud/core/stable10/vendor-bin/behat/composer.json -O /drone/owncloud-smoketest/composer.json
+      - wget https://raw.githubusercontent.com/owncloud/core/stable10/vendor-bin/behat/composer.lock -O /drone/owncloud-smoketest/composer.lock
       - wget https://raw.githubusercontent.com/owncloud/core/stable10/vendor-bin/behat/composer.json -O /drone/owncloud-smoketest/vendor-bin/behat/composer.json
       - cd /drone/owncloud-smoketest/ && composer install && composer bin install behat
 
